@@ -14,7 +14,7 @@ if($halfday eq 'p') {
 
 print "# source: BNO @ https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/\n";
 #print "# update: $last_update\n";
-print "# update: $year-$month-$day $hour:$minute:00 CST\n";
+print "# update: $year-$month-$day $hour:$minute:00 ET\n";
 print "# place|confirmed_cases|deaths|notes|sources\n";
 
 ($table_contents) = $data =~ /<tbody>(.*?)<\/tbody>/;
