@@ -1,4 +1,0 @@
-#!/bin/bash
-rm -f pneumonia 2>/dev/null
-echo -n 'Fetching... '
-wget -O dxy 'https://3g.dxy.cn/newh5/view/pneumonia' 2>/dev/null && echo "OK" || echo "FAILED"
