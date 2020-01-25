@@ -1,20 +1,40 @@
 #!/usr/bin/php
 <?php
 
+# check for an argument
+if(!isset($argv[1])) { 
+ print "ERROR: no argument provided.\n";
+ usage();
+}
+
+# validate first argument is a readable file
+if(!is_file($argv[1])) {
+ print "ERROR: '" . $argv[1] . "' is not a file.\n";
+ usage();
+}
+else if(!is_readable($argv[1])) {
+ print "ERROR: '" . $argv[1] . "' is not readable.\n";
+ usage();
+}
+
 # get data
-$data = `cat ../../data-sources/dxy/data/latest-dxy-2019ncov-data.csv`;
+$path = $argv[1];
+$data = `cat $path`;
+
+# store output file name
+$output_file_name = $path;
+$output_file_name = preg_replace('/\..*?$/','',$path) . '.svg';
 
 # get svg
-$svg = `cat blank.svg`;
-
-print_r($data);
-print '===========================' . "\n";
+$svgpath = dirname(__FILE__) . '/blank.svg';
+$svg = `cat $svgpath`;
+if(strlen($svg)==0) {
+ print "ERROR: Unable to read SVG\n";
+ exit(2);
+}
 
 # now process data
 $lines = explode("\n",$data);
-
-print_r($lines);
-print '===========================' . "\n";
 
 # line-wise
 foreach($lines as $line) {
@@ -61,6 +81,15 @@ $svg = preg_replace('/BOX3/','Few confirmed cases',$svg);
 $svg = preg_replace('/BOX4/','Over ' . $threshold . ' confirmed cases',$svg);
 
 # now output SVG
-file_put_contents('output.svg',$svg);
+file_put_contents($output_file_name,$svg);
+
+# usage
+function usage() {
+ global $argv;
+ print "usage:\n";
+ print "  " . basename($argv[0]) . " <dxy-derived-csv-file>\n";
+ print "     <dxy-derived-csv-file>  A CSV file that has been prepared by the 'process-dxy' tool.\n";
+ exit(1);
+}
 
 ?>
