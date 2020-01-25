@@ -21,7 +21,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>2019-nCoV Outbreak @ 2020-01-25</dc:title>
+        <dc:title>2019-nCoV Confirmed Cases</dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,14 +39,14 @@
      id="namedview90"
      showgrid="false"
      inkscape:zoom="1.5706089"
-     inkscape:cx="304.21606"
-     inkscape:cy="170.3217"
+     inkscape:cx="355.15172"
+     inkscape:cy="883.42094"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg88" />
   <title
-     id="title2">2019-nCoV Outbreak @ 2020-01-25</title>
+     id="title2">2019-nCoV Confirmed Cases</title>
   <defs
      id="defs6">
     <inkscape:perspective
@@ -368,7 +368,7 @@
        id="tspan3783"
        x="45.842091"
        y="63.044083"
-       style="-inkscape-font-specification:'sans-serif Bold';font-family:sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal">2019-nCoV Outbreak @ 2020-01-25</tspan></text>
+       style="-inkscape-font-specification:'sans-serif Bold';font-family:sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal">2019-nCoV Confirmed Cases</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.40375429"
@@ -463,4 +463,15 @@
        x="97.606438"
        y="726.49567"
        style="font-size:16px">Over 30 confirmed cases</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:0.96470588;stroke:none"
+     x="44.760693"
+     y="83.379593"
+     id="text946"><tspan
+       sodipodi:role="line"
+       id="tspan944"
+       x="44.760693"
+       y="83.379593"
+       style="font-size:16px;-inkscape-font-specification:'sans-serif Bold';font-family:sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal">2020-01-25 09:54:00 CST</tspan></text>
 </svg>
