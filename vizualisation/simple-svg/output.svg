@@ -11,7 +11,7 @@
    height="850"
    version="1.1"
    id="svg88"
-   sodipodi:docname="blank-with-text.svg"
+   sodipodi:docname="blank.svg"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06">
   <metadata
      id="metadata92">
@@ -38,9 +38,9 @@
      inkscape:window-height="1028"
      id="namedview90"
      showgrid="false"
-     inkscape:zoom="0.78530447"
-     inkscape:cx="500"
-     inkscape:cy="425"
+     inkscape:zoom="1.5706089"
+     inkscape:cx="216.6704"
+     inkscape:cy="450.46783"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -49,6 +49,13 @@
      id="title2">2019-nCoV Outbreak @ 2020-01-25</title>
   <defs
      id="defs6">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 425 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1000 : 425 : 1"
+       inkscape:persp3d-origin="500 : 283.33333 : 1"
+       id="perspective113" />
     <style
        type="text/css"
        id="style4">
@@ -363,13 +370,24 @@
        y="63.044083">2019-nCoV Outbreak @ 2020-01-25</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:16.15017128px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.40375429"
-     x="80.017609"
+     style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.40375429"
+     x="77.606438"
      y="774.99634"
      id="text3789"><tspan
        sodipodi:role="line"
        id="tspan3787"
-       x="80.017609"
-       y="800.99634"
-       style="stroke-width:0.40375429">https://github.com/globalcitizen/2019-wuhan-coronavirus-data</tspan></text>
+       x="77.606438"
+       y="774.99634"
+       style="font-size:16px;stroke-width:0.40375429">https://github.com/globalcitizen/2019-wuhan-coronavirus-data</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:0.96470588;stroke:none"
+     x="77.606438"
+     y="754.49567"
+     id="text200"><tspan
+       sodipodi:role="line"
+       id="tspan198"
+       x="77.606438"
+       y="754.49567"
+       style="font-size:16px">Open source data visualization</tspan></text>
 </svg>
