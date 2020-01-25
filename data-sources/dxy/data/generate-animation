@@ -1,2 +1,2 @@
 #!/bin/bash
-convert -delay 100 -density 150 *.svg -scale 800x latest-animation.gif
+rm latest-animation.gif && convert -delay 100 -density 150 *.svg -scale 800x latest-animation.gif
