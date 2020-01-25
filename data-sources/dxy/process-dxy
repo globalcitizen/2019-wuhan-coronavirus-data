@@ -18,7 +18,7 @@ foreach(explode("\n",$province_names_data) as $province_name_line) {
 #exit(0);
 
 # get live data
-$data = `wget -O - https://3g.dxy.cn/newh5/view/pneumonia`;
+$data = `wget -O - https://3g.dxy.cn/newh5/view/pneumonia 2>/dev/null`;
 
 # output buffer
 $output = '';
