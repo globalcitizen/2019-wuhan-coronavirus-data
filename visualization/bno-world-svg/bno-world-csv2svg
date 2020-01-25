@@ -1,0 +1,119 @@
+#!/usr/bin/php
+<?php
+
+# check for an argument
+if(!isset($argv[1])) { 
+ print "ERROR: no argument provided.\n";
+ usage();
+}
+
+# validate first argument is a readable file
+if(!is_file($argv[1])) {
+ print "ERROR: '" . $argv[1] . "' is not a file.\n";
+ usage();
+}
+else if(!is_readable($argv[1])) {
+ print "ERROR: '" . $argv[1] . "' is not readable.\n";
+ usage();
+}
+
+# get data
+$path = $argv[1];
+$data = `cat $path`;
+
+# store output file name
+$output_file_name = $path;
+$output_file_name = preg_replace('/\..*?$/','',$path) . '.svg';
+
+# get svg
+$svgpath = dirname(__FILE__) . '/blank.svg';
+$svg = file_get_contents($svgpath);
+if(strlen($svg)==0) {
+ print "ERROR: Unable to read SVG\n";
+ exit(2);
+}
+
+# now process data
+$lines = explode("\n",$data);
+$dateline = '(Unknown date/time)';
+$started = false;
+$threshold = 10;
+$css_append = '';
+
+# line-wise
+foreach($lines as $line) {
+ # first, discard comments
+ if($line[0] != '#') {
+  # now obtain info
+  list($country_name,$cases,$deaths) = explode('|',$line);
+  $cases = str_replace(',','',$cases);
+  if($country_name != '') {
+   if($country_name == 'CHINA TOTAL') { $country_name = 'China'; $started = true; }
+   if($started && $country_name != 'INTERNATIONAL TOTAL'){ 
+    print "country '$country_name' had $cases cases and $deaths deaths.\n";
+    # cases shows as red, which is $threshold is fully red, anything less is less
+    #  so $threshold and above = ff
+    #  0 = 00
+    # .. so all numbers must be reduced to that range.
+    if($cases>=$threshold) { $red = 'ff'; } else { $red = dechex(256 * ($cases/$threshold)); }
+    if(strlen($red) == 1) { $red = "0" . $red; }
+
+    # grey if no data
+    if($cases == 0) { 
+     $red = 'e3';
+     $green = 'e3';
+     $blue = 'e3'; 
+    }
+    else {
+     $green = '00';
+     $blue = '00';
+    }
+
+    # replace in SVG
+    #$svg = preg_replace('/id="' . $country_name . '"/','id="'.$country_name.'" style="fill-opacity:1;fill:#'.$red.$green.$blue.';" cases="'.$cases.'" deaths="'.$deaths.'"',$svg);
+    #print " (cases $cases generated red level '$red')\n";
+    $css_append .= "." . country_name_to_code($country_name) . "{fill:#".$red.$green.$blue.";}\n";
+    print "$country_name -> " . country_name_to_code($country_name) . "\n";
+   }
+  }
+ }
+ else {
+  # line starts with '#' so may be updated date
+  if(preg_match('/^# update: (.*)$/',$line,$matches)) {
+   $dateline = $matches[1];
+  }
+ }
+}
+
+# update css
+$svg = preg_replace('/<\/style>/',$css_append . "\n</style>",$svg);
+# update title
+#$svg = preg_replace('/SUBTITLE/',$dateline,$svg);
+#$svg = preg_replace('/TITLE/','2019-nCoV Confirmed Cases',$svg);
+#$svg = preg_replace('/NOTES1/','Open source data visualization',$svg);
+#$svg = preg_replace('/NOTES2/','https://github.com/globalcitizen/2019-wuhan-coronavirus-data',$svg);
+#$svg = preg_replace('/BOX1/','No suspected cases',$svg);
+#$svg = preg_replace('/BOX2/','Suspected cases only',$svg);
+#$svg = preg_replace('/BOX3/','Few confirmed cases',$svg);
+#$svg = preg_replace('/BOX4/','Over ' . $threshold . ' confirmed cases',$svg);
+
+# now output SVG
+file_put_contents($output_file_name,$svg);
+
+# usage
+function usage() {
+ global $argv;
+ print "usage:\n";
+ print "  " . basename($argv[0]) . " <bno-derived-csv-file>\n";
+ print "     <bno-derived-csv-file>  A CSV file that has been prepared by the 'process-bno' tool.\n";
+ exit(1);
+}
+
+# convert a country name ('Australia') to ISO code ('au')
+function country_name_to_code($country_name) {
+ $path = dirname(dirname(dirname(__FILE__))) . '/country-codes.csv';
+ $code = `grep '|$country_name$' $path |cut -d '|' -f1`;
+ return chop(strtolower($code));
+}
+
+?>
