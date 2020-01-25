@@ -8,6 +8,12 @@ It is hoped that this data will be useful to those producing visualizations or a
 
 Code is included.
 
+## Sample visualization
+
+![image](vizualisation/simple-svg/output.svg)
+
+Generates a static SVG. Based on a [raw SVG from wikimedia commons](https://upload.wikimedia.org/wikipedia/commons/f/fe/China_blank_province_map.svg) (simplest).
+
 ## Sources used
 
 ### [BNO](https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/)
@@ -25,13 +31,11 @@ High level information without specific source URLs. However, this is updated fr
 ## TODO
 
  * Convert disaparate data sources in to singular SQLite database
- * Visualization
-   * Options:
-     * [amcharts](https://www.amcharts.com/demos/map-with-curved-lines/?theme=dark) (icky licensing but looks cool)
-     * [d3.js](https://d3js.org/) and [d3-china-map](https://github.com/clemsos/d3-china-map) (good option but possibly overkill)
-     * [jvectormap](https://jvectormap.com/) and [jvectormap china](https://jvectormap.com/maps/countries/china/) (good option but no cities)
-     * [kartograph](http://kartograph.org/) (good option)
-     * [raw SVG from wikimedia commons](https://upload.wikimedia.org/wikipedia/commons/f/fe/China_blank_province_map.svg) (simplest)
+ * More visualization options:
+   * [amcharts](https://www.amcharts.com/demos/map-with-curved-lines/?theme=dark) (icky licensing but looks cool)
+   * [d3.js](https://d3js.org/) and [d3-china-map](https://github.com/clemsos/d3-china-map) (good option but possibly overkill)
+   * [jvectormap](https://jvectormap.com/) and [jvectormap china](https://jvectormap.com/maps/countries/china/) (good option but no cities)
+   * [kartograph](http://kartograph.org/) (good option)
  * Add other sources, eg. [English Wikipedia](https://en.wikipedia.org/wiki/2019%E2%80%9320_Wuhan_coronavirus_outbreak) (although it generally lags DXY on updates, the summary table is good for international data citations)
 
 ## Links of note
