@@ -12,11 +12,15 @@ Code is included.
 
 ![image](data-sources/dxy/data/20200125-190400-dxy-2019ncov-data.svg)
 
-Generates a static SVG. Currently color selection is quite bad based on a simple threshold algorithm. Source was [this SVG from wikimedia commons](https://upload.wikimedia.org/wikipedia/commons/f/fe/China_blank_province_map.svg).
+![image](data-sources/bno/data/20200125-055800-bno-2019ncov-data.svg)
 
-## Sample commands
+Generates static SVGs. Currently color selection is quite bad based on a simple threshold algorithm. Source images wwere [this one](https://upload.wikimedia.org/wikipedia/commons/f/fe/China_blank_province_map.svg) and [this one](https://commons.wikimedia.org/wiki/File:BlankMap-World.svg).
 
-The following command sequence will grab data from DXY and render it.
+## Generating
+
+### China
+
+For a China map, the following command sequence will grab data from DXY and render it.
 
 ```
 cd data-sources/dxy/
@@ -26,7 +30,21 @@ cd data
 ../../../visualization/dxy-china-svg/dxy-china-csv2svg sample.csv
 ```
 
-You now have a `sample.svg` file which contains the visualized form of the CSV output.
+You now have a `sample.svg` file which contains the visualized form of the CSV output showing China.
+
+### World
+
+For a world map, the process is similar.
+
+```
+cd data-sources/bno/
+./get-bno
+./process-dno >data/sample.csv
+../../../visualization/bno-world-svg/bno-world-csv2svg sample.csv
+```
+
+You now have a `sample.svg` file which contains the visualized form of the CSV output showing the world.
+
 
 ## Sources used
 
