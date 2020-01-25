@@ -1,0 +1,57 @@
+#!/usr/bin/php
+<?php
+
+# get data
+$data = `cat ../../data-sources/dxy/data/latest-dxy-2019ncov-data.csv`;
+
+# get svg
+$svg = `cat blank.svg`;
+
+print_r($data);
+print '===========================' . "\n";
+
+# now process data
+$lines = explode("\n",$data);
+
+print_r($lines);
+print '===========================' . "\n";
+
+# line-wise
+foreach($lines as $line) {
+ # first, discard comments
+ if($line[0] != '#') {
+  # now obtain info
+  list($province_name,$cases,$deaths) = explode('|',$line);
+  if($province_name != '') {
+   print "province '$province_name' had $cases cases and $deaths deaths.\n";
+   $threshold = 30;
+
+   # cases shows as red, which is $threshold is fully red, anything less is less
+   #  so $threshold and above = ff
+   #  0 = 00
+   # .. so all numbers must be reduced to that range.
+   if($cases>=$threshold) { $red = 'ff'; } else { $red = dechex(256 * ($cases/$threshold)); }
+   if(strlen($red) == 1) { $red = "0" . $red; }
+
+   # grey if no data
+   if($cases == 0) { 
+    $red = 'e3';
+    $green = 'e3';
+    $blue = 'e3'; 
+   }
+   else {
+    $green = '00';
+    $blue = '00';
+   }
+
+   # replace in SVG
+   $svg = preg_replace('/id="' . $province_name . '"/','id="'.$province_name.'" style="fill-opacity:1;fill:#'.$red.$green.$blue.';" cases="'.$cases.'" deaths="'.$deaths.'"',$svg);
+   print " (cases $cases generated red level '$red')\n";
+  }
+ }
+}
+
+# now output SVG
+file_put_contents('output.svg',$svg);
+
+?>
