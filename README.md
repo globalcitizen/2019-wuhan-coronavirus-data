@@ -12,7 +12,7 @@ Code is included.
 
 ![image](vizualisation/simple-svg/output.svg)
 
-Generates a static SVG. Based on a [raw SVG from wikimedia commons](https://upload.wikimedia.org/wikipedia/commons/f/fe/China_blank_province_map.svg) (simplest).
+Generates a static SVG. Currently color selection is quite bad based on a simple threshold algorithm. Source was [this SVG from wikimedia commons](https://upload.wikimedia.org/wikipedia/commons/f/fe/China_blank_province_map.svg).
 
 ## Sources used
 
