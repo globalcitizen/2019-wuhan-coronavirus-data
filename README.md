@@ -14,6 +14,20 @@ Code is included.
 
 Generates a static SVG. Currently color selection is quite bad based on a simple threshold algorithm. Source was [this SVG from wikimedia commons](https://upload.wikimedia.org/wikipedia/commons/f/fe/China_blank_province_map.svg).
 
+## Sample commands
+
+The following command sequence will grab data from DXY and render it.
+
+```
+cd data-sources/dxy/
+./get-dxy
+./process-dxy >data/sample.csv
+cd data
+../../../vizualisation/simple-svg/visualize-from-dxy-csv sample.csv
+```
+
+You now have a `sample.svg` file which contains the visualized form of the CSV output.
+
 ## Sources used
 
 ### [BNO](https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/)
