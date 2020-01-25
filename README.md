@@ -28,7 +28,7 @@ High level information without specific source URLs. However, this is updated fr
  * Visualization
    * Options:
      * [amcharts](https://www.amcharts.com/demos/map-with-curved-lines/?theme=dark) (icky licensing but looks cool)
-     * ...
+     * [d3.js](https://d3js.org/) and [d3-china-map](https://github.com/clemsos/d3-china-map) (probably a good option)
 
 ## Links of note
 
