@@ -14,9 +14,9 @@ Code is included.
 
 ## Sample visualization
 
-![image](data-sources/dxy/data/20200126-003200-dxy-2019ncov-data.csv)
+![image](data-sources/dxy/data/20200126-003200-dxy-2019ncov-data.svg)
 
-![image](data-sources/bno/data/20200125-055800-bno-2019ncov-data.svg)
+![image](data-sources/bno/data/20200125-180500-bno-2019ncov-data.svg)
 
 Generates static SVGs. Currently color selection is quite bad based on a simple threshold algorithm. Source images were [this one](https://upload.wikimedia.org/wikipedia/commons/f/fe/China_blank_province_map.svg) and [this one](https://commons.wikimedia.org/wiki/File:BlankMap-World.svg).
 
