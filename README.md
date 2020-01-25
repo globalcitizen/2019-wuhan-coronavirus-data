@@ -63,9 +63,10 @@ High level information without specific source URLs. However, this is updated fr
 
 ## TODO
 
- * Global view
+ * Add key to global view
  * Better color selection (plan is to move from opaque fill color to changing the alpha/opacity/transparency level)
- * Convert disaparate data sources in to singular SQLite database
+ * Convert disparate data sources in to singular SQLite database
+ * Add cities (needs an improved visualization system)
  * More visualization options:
    * [amcharts](https://www.amcharts.com/demos/map-with-curved-lines/?theme=dark) (icky licensing but looks cool)
    * [d3.js](https://d3js.org/) and [d3-china-map](https://github.com/clemsos/d3-china-map) (good option but possibly overkill)
