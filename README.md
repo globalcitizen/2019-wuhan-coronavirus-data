@@ -26,8 +26,16 @@ High level information without specific source URLs. However, this is updated fr
 
  * Convert disaparate data sources in to singular SQLite database
  * Visualization
+   * Options:
+     * [amcharts](https://www.amcharts.com/demos/map-with-curved-lines/?theme=dark) (icky licensing but looks cool)
+     * ...
 
 ## Links of note
 
  * *[Novel coronavirus 2019-nCoV: early estimation of epidemiological parameters and epidemic predictions](https://www.medrxiv.org/content/10.1101/2020.01.23.20018549v1.full.pdf)* (2020-01-23)
    * __Only 5% of cases are likely reported in official figures of confirmed cases.__
+
+## Other projects
+
+ * [BlankerL's DXY-2019-nCoV-Crawler](https://github.com/BlankerL/DXY-2019-nCoV-Crawler) and [API](http://lab.isaaclin.cn/nCoV/)
+ * [yitao94's 2019-nCoV python-based DXY crawler](https://github.com/yitao94/2019-nCoV)
