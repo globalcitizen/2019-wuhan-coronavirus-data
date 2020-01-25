@@ -55,6 +55,10 @@ foreach($lines as $line) {
 $svg = preg_replace('/TITLE/','2019-nCoV Outbreak @ 2020-01-25',$svg);
 $svg = preg_replace('/NOTES1/','Open source data visualization',$svg);
 $svg = preg_replace('/NOTES2/','https://github.com/globalcitizen/2019-wuhan-coronavirus-data',$svg);
+$svg = preg_replace('/BOX1/','No suspected cases',$svg);
+$svg = preg_replace('/BOX2/','Suspected cases only',$svg);
+$svg = preg_replace('/BOX3/','Few confirmed cases',$svg);
+$svg = preg_replace('/BOX4/','Over ' . $threshold . ' confirmed cases',$svg);
 
 # now output SVG
 file_put_contents('output.svg',$svg);
