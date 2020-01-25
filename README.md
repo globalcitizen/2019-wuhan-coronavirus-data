@@ -14,7 +14,7 @@ Code is included.
 
 ![image](data-sources/bno/data/20200125-055800-bno-2019ncov-data.svg)
 
-Generates static SVGs. Currently color selection is quite bad based on a simple threshold algorithm. Source images wwere [this one](https://upload.wikimedia.org/wikipedia/commons/f/fe/China_blank_province_map.svg) and [this one](https://commons.wikimedia.org/wiki/File:BlankMap-World.svg).
+Generates static SVGs. Currently color selection is quite bad based on a simple threshold algorithm. Source images were [this one](https://upload.wikimedia.org/wikipedia/commons/f/fe/China_blank_province_map.svg) and [this one](https://commons.wikimedia.org/wiki/File:BlankMap-World.svg).
 
 ## Generating
 
