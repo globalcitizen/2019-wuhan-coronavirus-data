@@ -41,7 +41,7 @@ Includes detail on foreign sources, individual provincial update URLs. Updated o
 High level information without specific source URLs. However, this is updated frequently and appears to be the best available data.
 
  * Data is timestamped in Beijing (CST) timezone
- * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/dxy/data/20200125-162000-dxy-2019ncov-data.csv)
+ * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/dxy/data/20200125-190400-dxy-2019ncov-data.csv)
 
 ## TODO
 
