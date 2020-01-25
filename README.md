@@ -2,7 +2,7 @@
 
 This public repository archives data over time from various public sources on the web.
 
-Data is presented as timestamped CSV files, using the Beijing (CST) timezone.
+Data is presented as timestamped CSV files, for maximum compatibility.
 
 It is hoped that this data will be useful to those producing visualizations or analyses.
 
@@ -33,13 +33,14 @@ You now have a `sample.svg` file which contains the visualized form of the CSV o
 ### [BNO](https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/)
 
 Includes detail on foreign sources, individual provincial update URLs. Updated once per day or so.
-
+ * Data is timestamped in US Eastern Standard Time (ET) timezone
  * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/bno/data/20200125-055800-bno-2019ncov-data.csv)
 
 ### [DXY](https://3g.dxy.cn/newh5/view/pneumonia)
 
 High level information without specific source URLs. However, this is updated frequently and appears to be the best available data.
 
+ * Data is timestamped in Beijing (CST) timezone
  * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/dxy/data/20200125-162000-dxy-2019ncov-data.csv)
 
 ## TODO
