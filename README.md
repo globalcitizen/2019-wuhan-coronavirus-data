@@ -10,7 +10,7 @@ Code is included.
 
 ## Sample visualization
 
-![image](vizualisation/simple-svg/output.svg)
+![image](data-sources/dxy/data/20200125-190400-dxy-2019ncov-data.svg)
 
 Generates a static SVG. Currently color selection is quite bad based on a simple threshold algorithm. Source was [this SVG from wikimedia commons](https://upload.wikimedia.org/wikipedia/commons/f/fe/China_blank_province_map.svg).
 
