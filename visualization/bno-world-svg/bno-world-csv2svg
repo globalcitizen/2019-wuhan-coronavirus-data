@@ -88,10 +88,10 @@ foreach($lines as $line) {
 # update css
 $svg = preg_replace('/<\/style>/',$css_append . "\n</style>",$svg);
 # update title
-#$svg = preg_replace('/SUBTITLE/',$dateline,$svg);
-#$svg = preg_replace('/TITLE/','2019-nCoV Confirmed Cases',$svg);
-#$svg = preg_replace('/NOTES1/','Open source data visualization',$svg);
-#$svg = preg_replace('/NOTES2/','https://github.com/globalcitizen/2019-wuhan-coronavirus-data',$svg);
+$svg = preg_replace('/SUBTITLE/',$dateline,$svg);
+$svg = preg_replace('/TITLE/','2019-nCoV Confirmed Cases',$svg);
+$svg = preg_replace('/NOTE1/','Open source data visualization',$svg);
+$svg = preg_replace('/NOTE2/','https://github.com/globalcitizen/2019-wuhan-coronavirus-data',$svg);
 #$svg = preg_replace('/BOX1/','No suspected cases',$svg);
 #$svg = preg_replace('/BOX2/','Suspected cases only',$svg);
 #$svg = preg_replace('/BOX3/','Few confirmed cases',$svg);
@@ -111,6 +111,7 @@ function usage() {
 
 # convert a country name ('Australia') to ISO code ('au')
 function country_name_to_code($country_name) {
+ if($country_name == 'France') { return 'frx'; }
  $path = dirname(dirname(dirname(__FILE__))) . '/country-codes.csv';
  $code = `grep '|$country_name$' $path |cut -d '|' -f1`;
  return chop(strtolower($code));
