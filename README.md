@@ -14,9 +14,13 @@ Code is included.
 
 Includes detail on foreign sources, individual provincial update URLs. Updated once per day or so.
 
+ * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/bno/data/20200124-145500-bno-2019ncov-data.csv)
+
 ### DXY
 
 High level information without specific source URLs. However, this is updated frequently and appears to be the best available data.
+
+ * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/dxy/data/20200125-102800-dxy-2019ncov-data.csv)
 
 ## TODO
 
