@@ -17,3 +17,8 @@ Includes detail on foreign sources, individual provincial update URLs. Updated o
 ### DXY
 
 High level information without specific source URLs. However, this is updated frequently and appears to be the best available data.
+
+## TODO
+
+ * Convert disaparate data sources in to singular SQLite database
+ * Visualization
