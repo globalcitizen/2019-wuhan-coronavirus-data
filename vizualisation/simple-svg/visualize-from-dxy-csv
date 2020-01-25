@@ -52,7 +52,7 @@ foreach($lines as $line) {
 }
 
 # update title
-$svg = preg_replace('/TITLE/','2019-nCoV Pandemic @ 2020-01-25',$svg);
+$svg = preg_replace('/TITLE/','2019-nCoV Outbreak @ 2020-01-25',$svg);
 $svg = preg_replace('/NOTES/','https://github.com/globalcitizen/2019-wuhan-coronavirus-data',$svg);
 
 # now output SVG
