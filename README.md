@@ -8,6 +8,10 @@ It is hoped that this data will be useful to those producing visualizations or a
 
 Code is included.
 
+## Sample animation
+
+![image](data-sources/dxy/data/latest-animation.gif)
+
 ## Sample visualization
 
 ![image](data-sources/dxy/data/20200125-210800-dxy-2019ncov-data.svg)
