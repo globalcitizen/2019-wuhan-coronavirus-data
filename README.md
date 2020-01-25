@@ -29,5 +29,5 @@ High level information without specific source URLs. However, this is updated fr
 
 ## Links of note
 
- * [Novel coronavirus 2019-nCoV: early estimation of epidemiological parameters and epidemic predictions](https://www.medrxiv.org/content/10.1101/2020.01.23.20018549v1.full.pdf) (2020-01-23)
+ * *[Novel coronavirus 2019-nCoV: early estimation of epidemiological parameters and epidemic predictions](https://www.medrxiv.org/content/10.1101/2020.01.23.20018549v1.full.pdf)* (2020-01-23)
    * Estimates only 5% of cases are likely reported
