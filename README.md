@@ -20,7 +20,7 @@ Generates a static SVG. Currently color selection is quite bad based on a simple
 
 Includes detail on foreign sources, individual provincial update URLs. Updated once per day or so.
 
- * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/bno/data/20200125-151600-bno-2019ncov-data.csv)
+ * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/bno/data/20200125-172000-bno-2019ncov-data.csv)
 
 ### [DXY](https://3g.dxy.cn/newh5/view/pneumonia)
 
