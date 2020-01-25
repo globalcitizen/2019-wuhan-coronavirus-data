@@ -23,7 +23,7 @@ cd data-sources/dxy/
 ./get-dxy
 ./process-dxy >data/sample.csv
 cd data
-../../../vizualisation/simple-svg/visualize-from-dxy-csv sample.csv
+../../../vizualisation/dxy-china-svg/dxy-china-csv2svg sample.csv
 ```
 
 You now have a `sample.svg` file which contains the visualized form of the CSV output.
