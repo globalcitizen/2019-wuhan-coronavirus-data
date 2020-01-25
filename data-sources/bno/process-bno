@@ -1,0 +1,58 @@
+#!/usr/bin/perl
+$data = `cat bno`;
+#print "data is " . length($data) . " long\n";
+($last_update) = $data =~ /Last update: (.*?)</;
+
+# "24 January 2020 at 2:55 p.m." -> "2020-01-24 14:55:00"
+($day,$month,$year,$hour,$minute,$halfday) = $last_update =~ /(\d+) +([^ ]+) +(\d+) +at +(\d+):(\d+) (.)/;
+$month =~ s/January/01/;
+$month =~ s/February/02/;
+$month =~ s/March/03/;
+if($halfday eq 'p') {
+ $hour = $hour + 12;
+}
+
+print "# source: BNO @ https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/\n";
+#print "# update: $last_update\n";
+print "# update: $year-$month-$day $hour:$minute:00 CST\n";
+print "# place|confirmed_cases|deaths|notes|sources\n";
+
+($table_contents) = $data =~ /<tbody>(.*?)<\/tbody>/;
+
+#print "Table contents: $table_contents\n";
+
+# here is the per area data
+@areas = $data =~ /<tr>(.*?)<\/tr>/g;
+$total = 'domestic';
+foreach $area (@areas) {
+ #print " [area...]\n";
+ #print "$area\n";
+ @fields = $area =~ /<td.*?>(.*?)<\/td>/g;
+ $area_name = $fields[0];
+ $area_name =~ s/ province <br>\(including Wuhan\)//g;
+ $area_name =~ s/ +?(province)? *?$//g;
+ $area_name =~ s/ Region$//g;
+ if($area_name eq '<strong>INTERNATIONAL</strong>') {
+  $total = 'international';
+ }
+ $area_cases = $fields[1];
+ $area_deaths = $fields[2];
+ $area_notes = $fields[3];
+ # convert links to simplify
+ $area_links = $fields[4];
+ @urls = $area_links =~ /href="(.*?)"/g;
+ $area_links = join(' ',@urls);
+ if($area_name eq '<strong>TOTAL</strong>') {
+  if($total eq 'international') {
+   $area_name = 'INTERNATIONAL TOTAL';
+  }
+  elsif($total eq 'domestic') {
+   $area_name = 'CHINA TOTAL';
+  }
+  $area_cases =~ s/<.*?>//g;
+  $area_deaths =~ s/<.*?>//g;
+ }
+ if(($area_name ne '<strong>CHINA</strong>') && ($area_name ne '<strong>INTERNATIONAL</strong>')) {
+  print "$area_name|$area_cases|$area_deaths|$area_notes|$area_links\n";
+ }
+}

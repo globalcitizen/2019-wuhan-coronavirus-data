@@ -1,0 +1,91 @@
+#!/usr/bin/php
+<?php
+$province_names_data = `cat ../../china-province-names.csv`;
+global $province_names;
+$province_names  = array();
+$province_names['en'] = array();
+$province_names['zh'] = array();
+
+foreach(explode("\n",$province_names_data) as $province_name_line) {
+ #print "line is '$province_name_line'\n";
+ list($chinese_name,$english_name) = explode('|',$province_name_line);
+ #print " chinese name = $chinese_name\n";
+ #print " english name = $english_name\n";
+ $province_names['zh'][$chinese_name] = $english_name;
+ $province_names['en'][$english_name] = $chinese_name;
+}
+#print_r($province_names);
+#exit(0);
+
+$data = `cat dxy`;
+#print "data is " . length($data) . " long\n";
+preg_match('/截至 (\d\d\d\d-\d\d-\d\d \d\d:\d\d)/',$data,$matches);
+$last_update = $matches[1];
+
+print "# source: DXY @ https://3g.dxy.cn/newh5/view/pneumonia\n";
+date_default_timezone_set('Asia/Shanghai');
+$date_parsed = strtotime($last_update);
+print "# update: " . date('Y-m-d H:i:s T',$date_parsed) . "\n";
+print "# place|confirmed_cases|deaths|notes|sources\n";
+
+preg_match('/window.getAreaStat = (.*?)<\//',$data,$matches);
+$json_data = $matches[1];
+$json_data = preg_replace('/}catch\(e\){}$/','',$json_data);
+#print_r($json_data);
+$structure = json_decode($json_data,1);
+#print_r($structure);
+
+$total_confirmed_cases = 0;
+$total_deaths = 0;
+
+
+# data
+#     [29] => Array
+#         (
+#             [provinceName] => 河北省
+#             [provinceShortName] => 河北
+#             [confirmedCount] => 2
+#             [suspectedCount] => 0
+#             [curedCount] => 0
+#             [deadCount] => 1
+#             [comment] =>
+#             [cities] => Array
+#                 (
+#                     [0] => Array
+#                         (
+#                             [cityName] => 石家庄
+#                             [confirmedCount] => 1
+#                             [suspectedCount] => 0
+#                             [curedCount] => 0
+#                             [deadCount] => 0
+#                         )
+# 
+#                     [1] => Array
+#                         (
+#                             [cityName] => 沧州
+#                             [confirmedCount] => 1
+#                             [suspectedCount] => 0
+#                             [curedCount] => 0
+#                             [deadCount] => 1
+#                         )
+# 
+#                 )
+# 
+#         )
+# 
+
+foreach($structure as $province) {
+ print province_name_to_english($province['provinceShortName']) . '|' . $province['confirmedCount'] . '|' . $province['deadCount'] . '|' . $province['comment'] . "|\n";
+ $total_confirmed_cases += $province['confirmedCount'];
+ $total_deaths += $province['deadCount'];
+}
+
+# now print total
+print "CHINA TOTAL|$total_confirmed_cases|$total_deaths||\n";
+
+function province_name_to_english($province_chinese_name) {
+ global $province_names;
+ return $province_names['zh'][$province_chinese_name];
+}
+
+?>

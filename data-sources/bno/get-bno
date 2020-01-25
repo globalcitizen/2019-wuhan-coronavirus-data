@@ -1,0 +1,4 @@
+#!/bin/bash
+rm -f bno 2>/dev/null
+echo -n 'Fetching... '
+wget -O bno 'https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/' 2>/dev/null && echo "OK" || echo "FAILED"
