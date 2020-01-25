@@ -21,7 +21,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>2019-nCoV Pandemic @ 2020-01-25</dc:title>
+        <dc:title>2019-nCoV Outbreak @ 2020-01-25</dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -46,7 +46,7 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg88" />
   <title
-     id="title2">2019-nCoV Pandemic @ 2020-01-25</title>
+     id="title2">2019-nCoV Outbreak @ 2020-01-25</title>
   <defs
      id="defs6">
     <style
@@ -360,7 +360,7 @@
        sodipodi:role="line"
        id="tspan3783"
        x="45.842091"
-       y="63.044083">2019-nCoV Pandemic @ 2020-01-25</tspan></text>
+       y="63.044083">2019-nCoV Outbreak @ 2020-01-25</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:16.15017128px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.40375429"
