@@ -44,6 +44,8 @@ High level information without specific source URLs. However, this is updated fr
 
 ## TODO
 
+ * Global view
+ * Better color selection (plan is to move from opaque fill color to changing the alpha/opacity/transparency level)
  * Convert disaparate data sources in to singular SQLite database
  * More visualization options:
    * [amcharts](https://www.amcharts.com/demos/map-with-curved-lines/?theme=dark) (icky licensing but looks cool)
