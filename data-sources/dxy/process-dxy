@@ -93,8 +93,8 @@ $total_deaths = 0;
 
 foreach($structure as $province) {
  $output .= province_name_to_english($province['provinceShortName']) . '|' . $province['confirmedCount'] . '|' . $province['deadCount'] . '|' . $province['comment'] . "|\n";
- $total_confirmed_cases .= $province['confirmedCount'];
- $total_deaths .= $province['deadCount'];
+ $total_confirmed_cases += $province['confirmedCount'];
+ $total_deaths += $province['deadCount'];
 }
 
 # now print total
