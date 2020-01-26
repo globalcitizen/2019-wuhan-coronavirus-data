@@ -105,8 +105,12 @@ function province_name_to_english($province_chinese_name) {
  return $province_names['zh'][$province_chinese_name];
 }
 
-# finally, output CSV
+# output CSV
 file_put_contents($output_csv_filename,$output);
+
+# finally, generate SVG
+$path = dirname(dirname(dirname(__FILE__))) . "/visualization/dxy-china-svg/dxy-china-csv2svg";
+exec("$path $output_csv_filename");
 print "OK\n";
 
 ?>
