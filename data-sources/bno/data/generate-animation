@@ -1,3 +1,0 @@
-#!/bin/bash
-rm -f latest-animation.gif 2>/dev/null
-convert -delay 100 -density 150 *.svg -scale 800x latest-animation.gif
