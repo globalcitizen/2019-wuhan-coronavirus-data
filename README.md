@@ -18,7 +18,9 @@ Code is included.
 
 ![image](data-sources/bno/data/20200127-041800-bno-2019ncov-data.svg)
 
-Generates static SVGs. Currently color selection is quite bad based on a simple threshold algorithm. Source images were [this one](https://upload.wikimedia.org/wikipedia/commons/f/fe/China_blank_province_map.svg) and [this one](https://commons.wikimedia.org/wiki/File:BlankMap-World.svg).
+Generates static SVGs. 
+
+Source images were [this one](https://upload.wikimedia.org/wikipedia/commons/f/fe/China_blank_province_map.svg) and [this one](https://commons.wikimedia.org/wiki/File:BlankMap-World.svg).
 
 ## Generating
 
@@ -65,7 +67,6 @@ High level information without specific source URLs. However, this is updated fr
 ## TODO
 
  * Add key to global view
- * Better color selection (plan is to move from opaque fill color to changing the alpha/opacity/transparency level)
  * Convert disparate data sources in to singular SQLite database
  * Add cities (needs an improved visualization system)
  * More visualization options:
