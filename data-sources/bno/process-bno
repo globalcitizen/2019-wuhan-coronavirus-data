@@ -42,7 +42,7 @@ foreach $area (@areas) {
  $area_links = $fields[4];
  @urls = $area_links =~ /href="(.*?)"/g;
  $area_links = join(' ',@urls);
- if($area_name eq '<strong>TOTAL</strong>') {
+ if($area_name eq '<strong>TOTAL</strong>' || $area_name eq '<strong>MAINLAND CHINA</strong>') {
   if($total eq 'international') {
    $area_name = 'INTERNATIONAL TOTAL';
   }
