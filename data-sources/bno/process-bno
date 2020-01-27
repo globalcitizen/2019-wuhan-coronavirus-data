@@ -25,13 +25,16 @@ print "# place|confirmed_cases|deaths|notes|sources\n";
 @areas = $data =~ /<tr>(.*?)<\/tr>/g;
 $total = 'domestic';
 foreach $area (@areas) {
- #print " [area...]\n";
- #print "$area\n";
+ #print " [area: '";
+ #print "$area']\n";
  @fields = $area =~ /<td.*?>(.*?)<\/td>/g;
  $area_name = $fields[0];
  $area_name =~ s/ province <br>\(including Wuhan\)//g;
  $area_name =~ s/ +?(province)? *?$//g;
  $area_name =~ s/ Region$//g;
+ if($area_name eq '<strong>REGIONS</strong>') {
+  $total = 'greaterchina';
+ }
  if($area_name eq '<strong>INTERNATIONAL</strong>') {
   $total = 'international';
  }
@@ -42,9 +45,14 @@ foreach $area (@areas) {
  $area_links = $fields[4];
  @urls = $area_links =~ /href="(.*?)"/g;
  $area_links = join(' ',@urls);
- if($area_name eq '<strong>TOTAL</strong>' || $area_name eq '<strong>MAINLAND CHINA</strong>') {
+ # if we have a non-numeric (eg. header) line
+ #if($area_cases < 1) { #$area_name eq '<strong>TOTAL</strong>' || $area_name eq '<strong>MAINLAND CHINA</strong>') {
+ if($area_name =~ /<strong>/) {
   if($total eq 'international') {
    $area_name = 'INTERNATIONAL TOTAL';
+  }
+  elsif($total eq 'greaterchina') {
+   $area_name = 'GREATER CHINA TOTAL';
   }
   elsif($total eq 'domestic') {
    $area_name = 'CHINA TOTAL';
@@ -52,7 +60,9 @@ foreach $area (@areas) {
   $area_cases =~ s/<.*?>//g;
   $area_deaths =~ s/<.*?>//g;
  }
- if(($area_name ne '<strong>CHINA</strong>') && ($area_name ne '<strong>INTERNATIONAL</strong>')) {
+ if($area_cases > 0) {
+#ne '0' && $area_cases < 1) {
+# if(($area_name ne '<strong>CHINA</strong>') && ($area_name ne '<strong>INTERNATIONAL</strong>')) {
   print "$area_name|$area_cases|$area_deaths|$area_notes|$area_links\n";
  }
 }
