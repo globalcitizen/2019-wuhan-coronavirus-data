@@ -1,5 +1,6 @@
 #!/usr/bin/env php
 <?php
+error_reporting(E_ERROR);
 $province_names_data = `cat ../../china-province-names.csv`;
 global $province_names;
 $province_names  = array();
