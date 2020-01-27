@@ -42,7 +42,7 @@ For a world map, the process is similar.
 ./build world
 ```
 
-You now have a `data-sources/bno/sample.svg` file which contains the visualized form of the CSV (`data-sources/bno/data/sample.csv`) output showing the world.
+You now have timestamped CSV and SVG files in `data-sources/bno/data`.
 
 
 ## Sources used
