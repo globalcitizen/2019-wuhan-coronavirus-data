@@ -55,7 +55,7 @@ foreach($lines as $line) {
     #  so $threshold and above = ff
     #  0 = 00
     # .. so all numbers must be reduced to that range.
-    if($cases>=$threshold) { $red = 'ff'; } else { $red = dechex(256 * ($cases/$threshold)); }
+    if(!is_int($cases) or $cases>=$threshold) { $red = 'ff'; } else { $red = dechex(256 * ($cases/$threshold)); }
     if(strlen($red) == 1) { $red = "0" . $red; }
 
     # grey if no data
