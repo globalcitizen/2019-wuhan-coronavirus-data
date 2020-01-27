@@ -29,8 +29,7 @@ Source images were [this one](https://upload.wikimedia.org/wikipedia/commons/f/f
 For a China map, the following command sequence will grab data from DXY and render it.
 
 ```
-cd data-sources/dxy/
-./process-dxy
+./build china
 ```
 
 You now have timestamped JSON, CSV and SVG files in the `data-sources/dxy/data/` subdirectory.
@@ -40,13 +39,10 @@ You now have timestamped JSON, CSV and SVG files in the `data-sources/dxy/data/`
 For a world map, the process is similar.
 
 ```
-cd data-sources/bno/
-./get-bno
-./process-bno >data/sample.csv
-../../../visualization/bno-world-svg/bno-world-csv2svg sample.csv
+./build world
 ```
 
-You now have a `sample.svg` file which contains the visualized form of the CSV output showing the world.
+You now have a `data-sources/bno/sample.svg` file which contains the visualized form of the CSV (`data-sources/bno/data/sample.csv`) output showing the world.
 
 
 ## Sources used
