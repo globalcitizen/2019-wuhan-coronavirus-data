@@ -22,8 +22,8 @@ $path = $argv[1];
 $data = `cat $path`;
 
 # store output file name
-$output_file_name = $path;
-$output_file_name = preg_replace('/\..*?$/','',$path) . '.svg';
+$output_file_name = basename($path);
+$output_file_name = str_replace('.csv','.svg',$output_file_name);
 
 # get svg
 $svgpath = dirname(__FILE__) . '/blank.svg';
