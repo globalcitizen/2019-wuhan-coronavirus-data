@@ -42,7 +42,7 @@ For a world map, the process is similar.
 ```
 cd data-sources/bno/
 ./get-bno
-./process-dno >data/sample.csv
+./process-bno >data/sample.csv
 ../../../visualization/bno-world-svg/bno-world-csv2svg sample.csv
 ```
 
