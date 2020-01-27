@@ -43,7 +43,7 @@ $css_append = '';
 # line-wise
 foreach($lines as $line) {
  # first, discard comments
- if($line[0] != '#') {
+ if(isset($line[0]) and $line[0] != '#') {
   # now obtain info
   list($country_name,$cases,$deaths) = explode('|',$line);
   $cases = str_replace(',','',$cases);
