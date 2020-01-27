@@ -1,4 +1,4 @@
-#!/usr/bin/php
+#!/usr/bin/env php
 <?php
 $province_names_data = `cat ../../china-province-names.csv`;
 global $province_names;
