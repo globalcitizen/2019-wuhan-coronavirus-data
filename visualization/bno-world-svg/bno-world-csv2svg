@@ -1,4 +1,4 @@
-#!/usr/bin/php
+#!/usr/bin/env php
 <?php
 
 # check for an argument
@@ -22,8 +22,8 @@ $path = $argv[1];
 $data = `cat $path`;
 
 # store output file name
-$output_file_name = $path;
-$output_file_name = preg_replace('/\..*?$/','',$path) . '.svg';
+$output_file_name = basename($path);
+$output_file_name = str_replace('.csv','.svg',$output_file_name);
 
 # get svg
 $svgpath = dirname(__FILE__) . '/blank.svg';
@@ -43,7 +43,7 @@ $css_append = '';
 # line-wise
 foreach($lines as $line) {
  # first, discard comments
- if($line[0] != '#') {
+ if(isset($line[0]) and $line[0] != '#') {
   # now obtain info
   list($country_name,$cases,$deaths) = explode('|',$line);
   $cases = str_replace(',','',$cases);
@@ -55,7 +55,7 @@ foreach($lines as $line) {
     #  so $threshold and above = ff
     #  0 = 00
     # .. so all numbers must be reduced to that range.
-    if($cases>=$threshold) { $red = 'ff'; } else { $red = dechex(256 * ($cases/$threshold)); }
+    if(!is_int($cases) or $cases>=$threshold) { $red = 'ff'; } else { $red = dechex(256 * ($cases/$threshold)); }
     if(strlen($red) == 1) { $red = "0" . $red; }
 
     # grey if no data

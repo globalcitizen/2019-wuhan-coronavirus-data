@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ $1 == china ]]; then
+    cd ./data-sources/dxy/
+	./process-dxy
+else
+	cd ./data-sources/bno
+	./get-bno
+	./process-bno > ./data/sample.csv
+
+	../../visualization/bno-world-svg/bno-world-csv2svg ./data/sample.csv
+fi
+
