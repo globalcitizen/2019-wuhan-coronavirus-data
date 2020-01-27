@@ -47,6 +47,7 @@ foreach($lines as $line) {
    print "province '$province_name' had $cases cases and $deaths deaths.\n";
    $threshold = 30;
 
+   ######## OLD ALGORITHM: GENERATE RED LEVEL #####################################################
    # cases shows as red, which is $threshold is fully red, anything less is less
    #  so $threshold and above = ff
    #  0 = 00
@@ -64,10 +65,17 @@ foreach($lines as $line) {
     $green = '00';
     $blue = '00';
    }
+   ###########################################################################################
+
+   # new algorithm: generate opacity
+   $opacity = $cases/$threshold;
+   if($opacity>1) { $opacity=1; }
 
    # replace in SVG
-   $svg = preg_replace('/id="' . $province_name . '"/','id="'.$province_name.'" style="fill-opacity:1;fill:#'.$red.$green.$blue.';" cases="'.$cases.'" deaths="'.$deaths.'"',$svg);
-   print " (cases $cases generated red level '$red')\n";
+   $svg = preg_replace('/id="' . $province_name . '"/','id="'.$province_name.'" style="fill-opacity:'.$opacity.';fill:#ff0000;" cases="'.$cases.'" deaths="'.$deaths.'"',$svg);
+# WAS .... .$red.$green.$blue.';" cases="'.$cases.'" deaths="'.$deaths.'"',$svg);
+
+   print " (cases $cases generated red level '$red' / opacity '$opacity')\n";
   }
  }
  else {
