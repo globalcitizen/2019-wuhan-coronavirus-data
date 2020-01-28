@@ -10,7 +10,14 @@ Code is included.
 
 ## Sample animation
 
+### GIF format
+
 ![image](data-sources/dxy/data/latest-animation.gif)
+
+
+### WebM format
+
+![image](data-sources/dxy/data/latest-animation.webm)
 
 ## Sample visualization
 
