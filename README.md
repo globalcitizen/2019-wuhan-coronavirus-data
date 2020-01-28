@@ -73,8 +73,9 @@ High level information without specific source URLs. However, this is updated fr
    * [jvectormap](https://jvectormap.com/) and [jvectormap china](https://jvectormap.com/maps/countries/china/) (good option but no cities)
    * [kartograph](http://kartograph.org/) (good option)
  * Add other sources, eg.
-   * [English Wikipedia](https://en.wikipedia.org/wiki/2019%E2%80%9320_Wuhan_coronavirus_outbreak) (although it generally lags DXY on updates, the summary table is good for international data citations)
+   * [National Health Commission daily reports](http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml)
    * [Tencent live monitoring page](https://news.qq.com//zt2020/page/feiyan.htm)
+   * [English Wikipedia](https://en.wikipedia.org/wiki/2019%E2%80%9320_Wuhan_coronavirus_outbreak) (although it generally lags DXY on updates, the summary table is good for international data citations)
    * [Fuuuuuuu's map](https://maphub.net/Fuuuuuuu/map) which seems to have many international cases missed by BNO
 
 ## Links of note
