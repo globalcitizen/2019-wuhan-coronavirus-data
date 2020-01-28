@@ -75,6 +75,7 @@ High level information without specific source URLs. However, this is updated fr
  * Add other sources, eg.
    * [English Wikipedia](https://en.wikipedia.org/wiki/2019%E2%80%9320_Wuhan_coronavirus_outbreak) (although it generally lags DXY on updates, the summary table is good for international data citations)
    * [Tencent live monitoring page](https://news.qq.com//zt2020/page/feiyan.htm)
+   * [Fuuuuuuu's map](https://maphub.net/Fuuuuuuu/map) which seems to have many international cases missed by BNO
 
 ## Links of note
 
