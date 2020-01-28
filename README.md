@@ -84,6 +84,8 @@ High level information without specific source URLs. However, this is updated fr
    * __Hong Kong University professors estimate 43,590 infections as of 2020-01-25__. (ie. ~20x 'confirmed cases')
    * __2019-nCoV may be about to become a global epidemic__
    * __Self-sustaining human-to-human spread is already present in all major Chinese cities__
+ * *[Pattern of early human-to-human transmission of Wuhan 2019-nCoV](https://raw.githubusercontent.com/jriou/wcov/master/manuscript_v2.pdf)* (2020-01-24)
+   * __We found the basic reproduction number, R0, to be around 2.2 (90% high density interval 1.4–3.8), indicating the potential for sustained human-to-human transmission. Transmission characteristics appear to be of similar magnitude to [severe acute respiratory syndrome-related coronavirus (SARS-CoV)](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome) and the [1918 pandemic influenza](https://en.wikipedia.org/wiki/1918_flu_pandemic).__
  * *[Novel coronavirus 2019-nCoV: early estimation of epidemiological parameters and epidemic predictions](https://www.medrxiv.org/content/10.1101/2020.01.23.20018549v1.full.pdf)* (2020-01-23)
    * __Only 5% of cases are likely reported in official figures of confirmed cases.__
 
