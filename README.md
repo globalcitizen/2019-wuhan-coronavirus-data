@@ -46,6 +46,15 @@ For a world map, the process is similar.
 
 You now have timestamped CSV and SVG files in `data-sources/bno/data`.
 
+## Software Dependencies
+
+Probably an incomplete list:
+ * bash
+ * perl
+ * php
+ * imagemagick
+ * ffmpeg
+ * wget
 
 ## Sources used
 
