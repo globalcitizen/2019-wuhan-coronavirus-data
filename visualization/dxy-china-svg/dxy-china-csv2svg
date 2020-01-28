@@ -46,7 +46,7 @@ foreach($lines as $line) {
   list($province_name,$cases,$deaths) = explode('|',$line);
   if($province_name != '') {
    print "province '$province_name' had $cases cases and $deaths deaths.\n";
-   $threshold = 30;
+   $threshold = 100;
 
    ######## OLD ALGORITHM: GENERATE RED LEVEL #####################################################
    # cases shows as red, which is $threshold is fully red, anything less is less
