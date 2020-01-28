@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+error_reporting(E_ERROR);
+
 # check for an argument
 if(!isset($argv[1])) { 
  print "ERROR: no argument provided.\n";
