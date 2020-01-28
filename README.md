@@ -10,14 +10,9 @@ Code is included.
 
 ## Sample animation
 
-### GIF format
+Shown here in GIF format. There is a better (smaller/higher resolution) webm format also generated.
 
 ![image](data-sources/dxy/data/latest-animation.gif)
-
-
-### WebM format
-
-![image](data-sources/dxy/data/latest-animation.webm)
 
 ## Sample visualization
 
