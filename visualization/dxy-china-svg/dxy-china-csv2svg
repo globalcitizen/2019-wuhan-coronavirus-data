@@ -47,33 +47,45 @@ foreach($lines as $line) {
   if($province_name != '') {
    print "province '$province_name' had $cases cases and $deaths deaths.\n";
    $threshold = 100;
+   $threshold2 = 200;
+   $threshold3 = 500;
+   $threshold4 = 1000;
 
-   ######## OLD ALGORITHM: GENERATE RED LEVEL #####################################################
-   # cases shows as red, which is $threshold is fully red, anything less is less
-   #  so $threshold and above = ff
-   #  0 = 00
-   # .. so all numbers must be reduced to that range.
-   if($cases>=$threshold) { $red = 'ff'; } else { $red = dechex(256 * ($cases/$threshold)); }
-   if(strlen($red) == 1) { $red = "0" . $red; }
-
-   # grey if no data
-   if($cases == 0) { 
-    $red = 'e3';
-    $green = 'e3';
-    $blue = 'e3'; 
-   }
-   else {
-    $green = '00';
-    $blue = '00';
-   }
-   ###########################################################################################
+#   ######## OLD ALGORITHM: GENERATE RED LEVEL #####################################################
+#   # cases shows as red, which is $threshold is fully red, anything less is less
+#   #  so $threshold and above = ff
+#   #  0 = 00
+#   # .. so all numbers must be reduced to that range.
+#   if($cases>=$threshold) { $red = 'ff'; } else { $red = dechex(256 * ($cases/$threshold)); }
+#   if(strlen($red) == 1) { $red = "0" . $red; }
+#
+#   # grey if no data
+#   if($cases == 0) { 
+#    $red = 'e3';
+#    $green = 'e3';
+#    $blue = 'e3'; 
+#   }
+#   else {
+#    $green = '00';
+#    $blue = '00';
+#   }
+#   $fill = '#' . $red.$green.$blue;
+#   ###########################################################################################
 
    # new algorithm: generate opacity
+   $fill = '#ff0000';
    $opacity = $cases/$threshold;
    if($opacity>1) { $opacity=1; }
 
+   # addition for latest algorithm:
+   #  1. "generate opacity for values < $threshold" (above),
+   #  2. "otherwise 100% opacity and set colors for subsequent thresholds" (this code)
+   if($cases>$threshold2) { $fill = '#aa0000'; }
+   if($cases>$threshold3) { $fill = '#550000'; }
+   if($cases>$threshold4) { $fill = '#000000'; }
+
    # replace in SVG
-   $svg = preg_replace('/id="' . $province_name . '"/','id="'.$province_name.'" style="fill-opacity:'.$opacity.';fill:#ff0000;" cases="'.$cases.'" deaths="'.$deaths.'"',$svg);
+   $svg = preg_replace('/id="' . $province_name . '"/','id="'.$province_name.'" style="fill-opacity:'.$opacity.';fill:'.$fill.';" cases="'.$cases.'" deaths="'.$deaths.'"',$svg);
 # WAS .... .$red.$green.$blue.';" cases="'.$cases.'" deaths="'.$deaths.'"',$svg);
 
    print " (cases $cases generated red level '$red' / opacity '$opacity')\n";
@@ -92,10 +104,10 @@ $svg = preg_replace('/SUBTITLE/',$dateline,$svg);
 $svg = preg_replace('/TITLE/','2019-nCoV Confirmed Cases',$svg);
 $svg = preg_replace('/NOTES1/','Open source data visualization',$svg);
 $svg = preg_replace('/NOTES2/','https://github.com/globalcitizen/2019-wuhan-coronavirus-data',$svg);
-$svg = preg_replace('/BOX1/','No suspected cases',$svg);
-$svg = preg_replace('/BOX2/','No confirmed cases',$svg);
-$svg = preg_replace('/BOX3/','Few confirmed cases',$svg);
-$svg = preg_replace('/BOX4/','Over ' . $threshold . ' confirmed cases',$svg);
+$svg = preg_replace('/BOX1/','Over ' . $threshold . ' confirmed cases',$svg);
+$svg = preg_replace('/BOX2/','Over ' . $threshold2 . ' confirmed cases',$svg);
+$svg = preg_replace('/BOX3/','Over ' . $threshold3 . ' confirmed cases',$svg);
+$svg = preg_replace('/BOX4/','Over ' . $threshold4 . ' confirmed cases',$svg);
 
 # now output SVG
 file_put_contents($output_file_name,$svg);
