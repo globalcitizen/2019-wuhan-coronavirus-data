@@ -15,8 +15,6 @@ foreach(explode("\n",$province_names_data) as $province_name_line) {
  $province_names['zh'][$chinese_name] = $english_name;
  $province_names['en'][$english_name] = $chinese_name;
 }
-#print_r($province_names);
-#exit(0);
 
 # get live data
 $data = `wget -O - https://3g.dxy.cn/newh5/view/pneumonia 2>/dev/null`;
@@ -25,8 +23,11 @@ $data = `wget -O - https://3g.dxy.cn/newh5/view/pneumonia 2>/dev/null`;
 $output = '';
 
 #print "data is " . length($data) . " long\n";
-preg_match('/截至 (\d\d\d\d-\d\d-\d\d \d\d:\d\d)/',$data,$matches);
-$last_update = $matches[1];
+#preg_match('/截至 (\d\d\d\d-\d\d-\d\d \d\d:\d\d)/',$data,$matches);
+$last_update = highest_time($data);
+
+#print "last update = $last_update\n";
+#exit(0);
 
 $output .= "# source: DXY @ https://3g.dxy.cn/newh5/view/pneumonia\n";
 date_default_timezone_set('Asia/Shanghai');
@@ -113,5 +114,22 @@ file_put_contents($output_csv_filename,$output);
 $path = dirname(dirname(dirname(__FILE__))) . "/visualization/dxy-china-svg/dxy-china-csv2svg";
 exec("$path $output_csv_filename");
 print "OK\n";
+
+# extract publication time from newly simplified HTML
+function highest_time($data) {
+        $highest_time = 0;
+        $data = preg_replace('/,/',"\n",$data);
+        $lines = explode("\n",$data);
+        foreach($lines as $line) {
+         if(preg_match('/:(\d{10})/',$line,$matches)) {
+          if($matches[1] > $highest_time) {
+           $highest_time = $matches[1];
+          }
+         }
+        }
+	# add 8 hours for CST
+	$highest_time = $highest_time + (60*60*8);
+        return gmdate('Y-m-d H:i:s',$highest_time);
+}
 
 ?>
