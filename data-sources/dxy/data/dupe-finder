@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+$results = `ls *.csv`;
+
+print $results;
+
+@lines = split(/\n/,$results);
+
+foreach $line (@lines) {
+ chop($md5 = `cat $line|grep -v ^#|md5`);
+ print "$line = $md5\n";
+}
