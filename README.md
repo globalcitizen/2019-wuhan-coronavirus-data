@@ -106,3 +106,36 @@ High level information without specific source URLs. However, this is updated fr
 
  * [BlankerL's DXY-2019-nCoV-Crawler](https://github.com/BlankerL/DXY-2019-nCoV-Crawler) and [API](http://lab.isaaclin.cn/nCoV/)
  * [yitao94's 2019-nCoV python-based DXY crawler](https://github.com/yitao94/2019-nCoV)
+
+## How this was built (non-technical explanation)
+
+This section is written for the curious / non-technical user.
+
+The general approach to problems such as these is as follows:
+ 1. Gather the data
+ 2. Modify and store it
+ 3. Do something with it.
+
+### Gather the data
+
+The area of programming surrounding gathering data from websites that were not explicitly designed for it is called [web scraping](https://en.wikipedia.org/wiki/Web_scraping).
+
+In general, web scraping consists of making an [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) (web) request to the website in question, [parsing](https://en.wikipedia.org/wiki/Parsing#Computer_languages) (or interpreting) the response, and [extracting](https://en.wikipedia.org/wiki/Extract,_transform,_load#Extract) the data of interest. Thereafter some modification may be required.
+
+### Modify and store it
+
+We translate some Chinese and English information ([toponyms]() or geographic region names) in to a known format by matching against a [static database file for countries](country-codes.csv) and a [similar file for regions in or near China](greater-china-region-names.csv).
+
+We then store the data in various formats, mostly [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) and [JSON](https://en.wikipedia.org/wiki/JSON).
+
+### Do something with it
+
+Finally, we interpret the data in two stages.
+
+#### Static image generation
+
+First, we transform some reference [SVG](https://en.wikipedia.org/wiki/SVG) maps gathered from [Wikimedia Commons](http://commons.wikimedia.org) by applying the data we have captured.
+
+#### Combine in to an animation
+
+Finally we animate multiple such resulting images in to two formats, [animated GIF](https://en.wikipedia.org/wiki/GIF#Animated_GIF) and the greatly superior and far more modern [webm container format](https://en.wikipedia.org/wiki/Webm) with [VP9 encoding](https://en.wikipedia.org/wiki/VP9).
