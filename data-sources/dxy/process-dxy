@@ -61,8 +61,8 @@ $total_deaths = 0;
 # data
 #     [29] => Array
 #         (
-#             [regionName] => 河北省
-#             [regionShortName] => 河北
+#             [provinceName] => 河北省
+#             [provinceShortName] => 河北
 #             [confirmedCount] => 2
 #             [suspectedCount] => 0
 #             [curedCount] => 0
@@ -94,7 +94,7 @@ $total_deaths = 0;
 # 
 
 foreach($structure as $region) {
- $output .= region_name_to_english($region['regionShortName']) . '|' . $region['confirmedCount'] . '|' . $region['deadCount'] . '|' . $region['comment'] . "|\n";
+ $output .= region_name_to_english($region['provinceShortName']) . '|' . $region['confirmedCount'] . '|' . $region['deadCount'] . '|' . $region['comment'] . "|\n";
  $total_confirmed_cases += $region['confirmedCount'];
  $total_deaths += $region['deadCount'];
 }
