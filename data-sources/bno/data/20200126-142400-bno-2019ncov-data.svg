@@ -211,16 +211,16 @@
 
 
   .cn{fill:#ff0000;}
-.th{fill:#cc0000;}
-.sg{fill:#660000;}
-.frx{fill:#4c0000;}
-.my{fill:#660000;}
-.jp{fill:#660000;}
-.kr{fill:#4c0000;}
-.us{fill:#660000;}
-.vn{fill:#330000;}
-.np{fill:#190000;}
-.au{fill:#660000;}
+.th{fill:#ff0000;}
+.sg{fill:#ff0000;}
+.frx{fill:#ff0000;}
+.my{fill:#ff0000;}
+.jp{fill:#ff0000;}
+.kr{fill:#ff0000;}
+.us{fill:#ff0000;}
+.vn{fill:#ff0000;}
+.np{fill:#ff0000;}
+.au{fill:#ff0000;}
 
 </style>
   <path

@@ -211,21 +211,20 @@
 
 
   .cn{fill:#ff0000;}
-.{fill:#e3e3e3;}
-.hk{fill:#cc0000;}
-.tw{fill:#800000;}
-.mo{fill:#990000;}
+.hk{fill:#ff0000;}
+.tw{fill:#ff0000;}
+.mo{fill:#ff0000;}
 .cn{fill:#ff0000;}
-.th{fill:#cc0000;}
-.sg{fill:#660000;}
-.frx{fill:#4c0000;}
-.my{fill:#660000;}
-.jp{fill:#660000;}
-.kr{fill:#660000;}
-.us{fill:#800000;}
-.vn{fill:#330000;}
-.np{fill:#190000;}
-.au{fill:#800000;}
+.th{fill:#ff0000;}
+.sg{fill:#ff0000;}
+.frx{fill:#ff0000;}
+.my{fill:#ff0000;}
+.jp{fill:#ff0000;}
+.kr{fill:#ff0000;}
+.us{fill:#ff0000;}
+.vn{fill:#ff0000;}
+.np{fill:#ff0000;}
+.au{fill:#ff0000;}
 
 </style>
   <path
