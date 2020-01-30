@@ -126,11 +126,11 @@ In general, web scraping consists of making an [HTTP](https://en.wikipedia.org/w
 
 We translate some Chinese and English information ([toponyms]() or geographic region names) in to a known format by matching against a [static database file for countries](country-codes.csv) and a [similar file for regions in or near China](greater-china-region-names.csv).
 
-We then store the data in various formats, mostly [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) and [JSON](https://en.wikipedia.org/wiki/JSON).
+We then store the data in various formats, mostly [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) and [JSON](https://en.wikipedia.org/wiki/JSON), which are [timestamped](https://en.wikipedia.org/wiki/Timestamp) in a [most to least significance](https://en.wikipedia.org/wiki/Significant_figures#In_computing) format, inspired by the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard, to aid in [sorting](https://en.wikipedia.org/wiki/Sorting_algorithm).
 
 ### Do something with it
 
-Finally, we interpret the data in two stages.
+Finally, we further interpret and process the data in two stages.
 
 #### Static image generation
 
@@ -138,4 +138,4 @@ First, we transform some reference [SVG](https://en.wikipedia.org/wiki/SVG) maps
 
 #### Combine in to an animation
 
-Finally we animate multiple such resulting images in to two formats, [animated GIF](https://en.wikipedia.org/wiki/GIF#Animated_GIF) and the greatly superior and far more modern [webm container format](https://en.wikipedia.org/wiki/Webm) with [VP9 encoding](https://en.wikipedia.org/wiki/VP9).
+Finally we animate multiple such resulting images in to two formats, [animated GIF](https://en.wikipedia.org/wiki/GIF#Animated_GIF) and the greatly superior and far more modern [webm container format](https://en.wikipedia.org/wiki/Webm) with [VP9 encoding](https://en.wikipedia.org/wiki/VP9). This is done using the open source tools [imagemagick](https://imagemagick.org/) and [ffmpeg](https://ffmpeg.org/).
