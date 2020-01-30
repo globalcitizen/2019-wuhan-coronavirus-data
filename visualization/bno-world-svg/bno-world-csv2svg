@@ -74,8 +74,14 @@ foreach($lines as $line) {
     # replace in SVG
     #$svg = preg_replace('/id="' . $country_name . '"/','id="'.$country_name.'" style="fill-opacity:1;fill:#'.$red.$green.$blue.';" cases="'.$cases.'" deaths="'.$deaths.'"',$svg);
     #print " (cases $cases generated red level '$red')\n";
-    $css_append .= "." . country_name_to_code($country_name) . "{fill:#".$red.$green.$blue.";}\n";
-    print "$country_name -> " . country_name_to_code($country_name) . "\n";
+    $cc = country_name_to_code($country_name);
+    if($cc != '') {
+     $css_append .= "." . country_name_to_code($country_name) . "{fill:#".$red.$green.$blue.";}\n";
+     print "$country_name -> " . country_name_to_code($country_name) . "\n";
+    }
+    else {
+     print "WARNING: Skipping non-country '$country_name'.\n";
+    }
    }
   }
  }
@@ -116,6 +122,9 @@ function country_name_to_code($country_name) {
  if($country_name == 'France') { return 'frx'; }
  $path = dirname(dirname(dirname(__FILE__))) . '/country-codes.csv';
  $code = `grep '|$country_name$' $path |cut -d '|' -f1`;
+# if($code == '') {
+#  print "WARNING: no country code returned for input '$country_name'!\n";
+# }
  return chop(strtolower($code));
 }
 
