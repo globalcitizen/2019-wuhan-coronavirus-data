@@ -1,19 +1,19 @@
 #!/usr/bin/env php
 <?php
 error_reporting(E_ERROR);
-$province_names_data = `cat ../../china-province-names.csv`;
-global $province_names;
-$province_names  = array();
-$province_names['en'] = array();
-$province_names['zh'] = array();
+$region_names_data = `cat ../../greater-china-region-names.csv`;
+global $region_names;
+$region_names  = array();
+$region_names['en'] = array();
+$region_names['zh'] = array();
 
-foreach(explode("\n",$province_names_data) as $province_name_line) {
- #print "line is '$province_name_line'\n";
- list($chinese_name,$english_name) = explode('|',$province_name_line);
+foreach(explode("\n",$region_names_data) as $region_name_line) {
+ #print "line is '$region_name_line'\n";
+ list($chinese_name,$english_name) = explode('|',$region_name_line);
  #print " chinese name = $chinese_name\n";
  #print " english name = $english_name\n";
- $province_names['zh'][$chinese_name] = $english_name;
- $province_names['en'][$english_name] = $chinese_name;
+ $region_names['zh'][$chinese_name] = $english_name;
+ $region_names['en'][$english_name] = $chinese_name;
 }
 
 # get live data
@@ -61,8 +61,8 @@ $total_deaths = 0;
 # data
 #     [29] => Array
 #         (
-#             [provinceName] => 河北省
-#             [provinceShortName] => 河北
+#             [regionName] => 河北省
+#             [regionShortName] => 河北
 #             [confirmedCount] => 2
 #             [suspectedCount] => 0
 #             [curedCount] => 0
@@ -93,18 +93,18 @@ $total_deaths = 0;
 #         )
 # 
 
-foreach($structure as $province) {
- $output .= province_name_to_english($province['provinceShortName']) . '|' . $province['confirmedCount'] . '|' . $province['deadCount'] . '|' . $province['comment'] . "|\n";
- $total_confirmed_cases += $province['confirmedCount'];
- $total_deaths += $province['deadCount'];
+foreach($structure as $region) {
+ $output .= region_name_to_english($region['regionShortName']) . '|' . $region['confirmedCount'] . '|' . $region['deadCount'] . '|' . $region['comment'] . "|\n";
+ $total_confirmed_cases += $region['confirmedCount'];
+ $total_deaths += $region['deadCount'];
 }
 
 # now print total
 $output .= "CHINA TOTAL|$total_confirmed_cases|$total_deaths||\n";
 
-function province_name_to_english($province_chinese_name) {
- global $province_names;
- return $province_names['zh'][$province_chinese_name];
+function region_name_to_english($region_chinese_name) {
+ global $region_names;
+ return $region_names['zh'][$region_chinese_name];
 }
 
 # output CSV
