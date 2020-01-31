@@ -1,7 +1,5 @@
 # 2019 Wuhan Coronavirus data (2019-nCoV)
 
-__Note: No longer updated. I have [resigned from Wikipedia in protest at content deletion](https://en.wikipedia.org/wiki/Wikipedia:Bureaucrats%27_noticeboard#Resignation_effective_immediately).__
-
 This public repository archives data over time from various public sources on the web.
 
 Data is presented as timestamped CSV files, for maximum compatibility.
@@ -18,9 +16,9 @@ Shown here in GIF format. There is a better (smaller/higher resolution) webm for
 
 ## Sample visualization
 
-![image](data-sources/dxy/data/20200130-182204-dxy-2019ncov-data.svg)
+![image](data-sources/dxy/data/20200131-215253-dxy-2019ncov-data.svg)
 
-![image](data-sources/bno/data/20200130-133500-bno-2019ncov-data.svg)
+![image](data-sources/bno/data/20200201-070545-bno-2019ncov-data.svg)
 
 Generates static SVGs. 
 
@@ -64,14 +62,14 @@ Probably an incomplete list:
 
 Includes detail on foreign sources, individual provincial update URLs. Updated once per day or so.
  * Data is timestamped in US Eastern Standard Time (ET) timezone
- * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/bno/data/20200130-133500-bno-2019ncov-data.csv)
+ * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/bno/data/20200201-070545-bno-2019ncov-data.csv)
 
 ### [DXY](https://3g.dxy.cn/newh5/view/pneumonia)
 
 High level information without specific source URLs. However, this is updated frequently and appears to be the best available data.
 
  * Data is timestamped in Beijing (CST) timezone
- * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/dxy/data/20200130-182204-dxy-2019ncov-data.csv)
+ * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/dxy/data/20200131-215253-dxy-2019ncov-data.csv)
 
 ## TODO
 
