@@ -1,5 +1,7 @@
 # 2019 Wuhan Coronavirus data (2019-nCoV)
 
+Note: No longer updated. I have [resigned from Wikipedia in protest at content deletion](https://en.wikipedia.org/wiki/Wikipedia:Bureaucrats%27_noticeboard#Resignation_effective_immediately).
+
 This public repository archives data over time from various public sources on the web.
 
 Data is presented as timestamped CSV files, for maximum compatibility.
