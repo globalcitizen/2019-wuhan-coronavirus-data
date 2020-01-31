@@ -1,0 +1,23 @@
+#!/bin/bash
+# old GIF version
+rm -f latest-animation.gif 2>/dev/null
+convert -delay 20 -density 150 *.svg -scale 800x latest-animation.gif
+
+# new WEBM via PNG version
+rm latest-animation.webm 2>/dev/null	# remove old animation 
+rm *.png 2>/dev/null			# remove old PNGs
+
+# convert all SVGs to PNG
+#mogrify -format png *.svg		# old way
+for svg in *.svg; 
+do 
+  echo $svg
+  rsvg-convert -f png -o $svg.png $svg 2>/dev/null;
+done;
+
+# generate video
+ffmpeg -r 4 -framerate 4 -pattern_type glob -i '*.png' -c:v libvpx-vp9 -pix_fmt yuva420p -vf fps=4 latest-animation.webm
+rm *.png 2>/dev/null			# remove old PNGs
+
+# this works
+#rsvg-convert -f png -o output.png 20200130-133500-bno-2019ncov-data.svg
