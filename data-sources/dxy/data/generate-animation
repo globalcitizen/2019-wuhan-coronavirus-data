@@ -9,6 +9,6 @@ rm latest-animation.webm 2>/dev/null	# remove old animation
 rm *.png 2>/dev/null			# remove old PNGs
 mogrify -format png *.svg		# convert all SVGs to PNG
 # generate video
-ffmpeg -r 4 -framerate 4 -pattern_type glob -i '*.png' -c:v libvpx-vp9 -pix_fmt yuva420p -vf fps=4 latest-animation.webm
+ffmpeg -r 8 -framerate 8 -pattern_type glob -i '*.png' -c:v libvpx-vp9 -pix_fmt yuva420p -vf fps=8 latest-animation.webm
 rm *.png 2>/dev/null			# remove old PNGs
 
