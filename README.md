@@ -96,6 +96,8 @@ High level information without specific source URLs. However, this is updated fr
 
 ## Links of note
 
+ * *[Coronavirus tally in epicentre Wuhan may be ‘just the tip of the iceberg’](https://www.scmp.com/news/china/society/article/3048792/coronavirus-tally-epicentre-wuhan-may-be-just-tip-iceberg)* (2020-02-03)
+   * Regarding interpreting the figures: *A doctor at the Union Hospital in Wuhan, who declined to be identified, said staff could only test about 100 patients a day, and they had to wait 48 hours for the results. “When the National Health Commission announces the numbers, they’re already two days old,” the doctor said. “We also have to turn away patients with mild symptoms, knowing that many of them will return later [when their condition worsens]. But we don’t have the space in the testing centre, or the hospital beds.”*
  * *[Potential for global spread of a novel coronavirus from China ](https://academic.oup.com/jtm/advance-article/doi/10.1093/jtm/taaa011/5716260)* (2020-01-27)
    * Ranks Burma, Cambodia, India, Indonesia, Philippines as relatively vulnerable.
  * *[Real-time nowcast and forecast on the extent of the Wuhan CoV outbreak, domestic and international spread](https://www.med.hku.hk/f/news/3549/7418/Wuhan-coronavirus-outbreak_AN-UPDATE_20200127.pdf)* (2020-01-27)
