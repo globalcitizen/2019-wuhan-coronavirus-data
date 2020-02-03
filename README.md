@@ -57,6 +57,7 @@ Probably an incomplete list:
  * perl
  * php
  * imagemagick
+ * gifsicle
  * ffmpeg
  * wget
 
