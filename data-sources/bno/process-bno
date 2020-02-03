@@ -41,6 +41,7 @@ foreach $area (@areas) {
  $area_cases = $fields[1];
  $area_deaths = $fields[2];
  $area_notes = $fields[3];
+ $area_notes =~ s/<\/?strong>//g;
  # convert links to simplify
  $area_links = $fields[4];
  @urls = $area_links =~ /href="(.*?)"/g;
