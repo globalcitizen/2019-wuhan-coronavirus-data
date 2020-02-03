@@ -22,11 +22,11 @@ Shown here in GIF format. There is a better (smaller/higher resolution) webm for
 
 Generates static SVGs. 
 
-Source images were [this one](https://upload.wikimedia.org/wikipedia/commons/f/fe/China_blank_province_map.svg) and [this one](https://commons.wikimedia.org/wiki/File:BlankMap-World.svg).
+Source images were `China_blank_province_map.svg`([link](https://commons.wikimedia.org/wiki/File:China_blank_province_map.svg)) and `BlankMap-World.svg`([link](https://commons.wikimedia.org/wiki/File:BlankMap-World.svg)).
 
 ## Requirements
 
-Unix-like OS with the dependencies installed (see below). In practice that means OSX with brew, Linux or a BSD. Windows is unsupported.
+Unix-like OS with the dependencies installed (see [Software Dependencies](#software-dependencies)). In practice that means macOS with brew, Linux or a BSD. Windows is unsupported.
 
 ## Generating
 
