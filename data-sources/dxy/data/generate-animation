@@ -1,8 +1,8 @@
 #!/bin/bash
 # old GIF version
 rm -f tmp.gif latest-animation.gif 2>/dev/null
-convert -delay 20 -density 150 *.svg -scale 800x tmp.gif
-gifsicle -O3 --colors 255 --lossy=30 tmp.gif -o latest-animation.gif && rm -f tmp.gif 2>/dev/null
+convert -delay 20 -density 150 *.svg -scale 800x latest-animation.gif
+#gifsicle -O3 --colors 255 --lossy=30 tmp.gif -o latest-animation.gif && rm -f tmp.gif 2>/dev/null
 
 # new WEBM via PNG version
 rm latest-animation.webm 2>/dev/null	# remove old animation 
