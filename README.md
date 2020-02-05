@@ -78,7 +78,6 @@ High level information without specific source URLs. However, this is updated fr
 
 ## TODO
 
- * Add historical data from personal archives and [Alihealth](https://alihealth.taobao.com/medicalhealth/influenzamap?chInfo=spring2020-stay-in) (thanks to @aboutmydreams / #3)
  * Add key to global view
  * Convert disparate data sources in to singular SQLite database
  * Add cities (needs an improved visualization system)
