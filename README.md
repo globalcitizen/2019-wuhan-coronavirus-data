@@ -16,7 +16,7 @@ Shown here in GIF format. There is a better (smaller/higher resolution) webm for
 
 ## Sample visualization
 
-![image](data-sources/dxy/data/20200205-094321-dxy-2019ncov-data.svg)
+![image](data-sources/dxy/data/20200206-004154-dxy-2019ncov-data.svg)
 
 ![image](data-sources/bno/data/20200204-205200-bno-2019ncov-data.svg)
 
@@ -42,7 +42,7 @@ You now have timestamped JSON, CSV and SVG files in the `data-sources/dxy/data/`
 
 ### World
 
-For a world map, the process is similar.
+For a world map, the process is similar. __Note that the BNO world data parser is currently broken and we have no plan to fix it.__
 
 ```
 ./build world
@@ -65,7 +65,7 @@ Probably an incomplete list:
 
 ### [BNO](https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/)
 
-Includes detail on foreign sources, individual provincial update URLs. Updated once per day or so.
+Includes detail on foreign sources, individual provincial update URLs. Updated once per day or so. __Note this is currently broken with no plans to fix it.__
  * Data is timestamped in US Eastern Standard Time (ET) timezone
  * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/bno/data/20200204-205200-bno-2019ncov-data.csv)
 
@@ -74,7 +74,7 @@ Includes detail on foreign sources, individual provincial update URLs. Updated o
 High level information without specific source URLs. However, this is updated frequently and appears to be the best available data.
 
  * Data is timestamped in Beijing (CST) timezone
- * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/dxy/data/20200205-094321-dxy-2019ncov-data.csv)
+ * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/dxy/data/20200206-004154-dxy-2019ncov-data.csv)
 
 ## TODO
 
