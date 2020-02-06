@@ -1,7 +1,7 @@
 # source: BNO @ https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/
 # update: 2020-01-27 4:18:00 ET
 # place|confirmed_cases|deaths|notes|sources
-<strong>MAINLAND CHINA</strong>|<strong>Cases</strong>|<strong>Deaths</strong>|<strong>Notes</strong>|
+MAINLAND CHINA|Cases</strong>|<strong>Deaths</strong>|<strong>Notes</strong>|
 Hubei|1,423|76|221 serious, 69 critical|http://wjw.hubei.gov.cn/fbjd/dtyw/202001/t20200127_2015306.shtml
 Guangdong|146|0|20 serious, 6 critical|http://wsjkw.gd.gov.cn/zwyw_yqxx/content/post_2879365.html
 Zhejiang|128|0|18 serious|https://www.zjwjw.gov.cn/art/2020/1/27/art_1202101_41857304.html
@@ -33,7 +33,7 @@ Shanxi|13|0||http://wjw.shanxi.gov.cn/wjywl02/24356.hrh
 Inner Mongolia|11|0||http://wjw.nmg.gov.cn/doc/2020/01/27/285096.shtml
 Qinghai|4|0||https://wsjkw.qinghai.gov.cn/zhxw/xwzx/2020/01/26/1580018654048.html
 CHINA TOTAL|2,804|81||
-<strong>REGIONS</strong>|<strong>Cases</strong>|<strong>Deaths</strong>|<strong>Notes</strong>|
+REGIONS|Cases</strong>|<strong>Deaths</strong>|<strong>Notes</strong>|
 Hong Kong|8|0||https://www.info.gov.hk/gia/general/202001/27/P2020012700049.htm
 Taiwan|5|0||https://www.cdc.gov.tw/Bulletin/Detail/gOZvd4ZaGpSDVoVRC2Qesg?typeid=9
 Macau|6|0||https://www.tdm.com.mo/c_news/radio_news.php?id=452638

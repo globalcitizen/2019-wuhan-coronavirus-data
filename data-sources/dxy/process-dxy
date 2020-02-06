@@ -94,9 +94,15 @@ $total_deaths = 0;
 # 
 
 foreach($structure as $region) {
- $output .= region_name_to_english($region['provinceShortName']) . '|' . $region['confirmedCount'] . '|' . $region['deadCount'] . '|' . $region['comment'] . "|\n";
- $total_confirmed_cases += $region['confirmedCount'];
- $total_deaths += $region['deadCount'];
+ $name = region_name_to_english($region['provinceShortName']);
+ if($name!='') {
+  $output .= region_name_to_english($region['provinceShortName']) . '|' . $region['confirmedCount'] . '|' . $region['deadCount'] . '|' . $region['comment'] . "|\n";
+  $total_confirmed_cases += $region['confirmedCount'];
+  $total_deaths += $region['deadCount'];
+ }
+ else {
+  print "WARNING: shortName '" . $region['provinceShortName'] . "' failed to map to known region.\n";
+ }
 }
 
 # now print total

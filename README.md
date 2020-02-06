@@ -16,13 +16,17 @@ Shown here in GIF format. There is a better (smaller/higher resolution) webm for
 
 ## Sample visualization
 
-![image](data-sources/dxy/data/20200131-215253-dxy-2019ncov-data.svg)
+![image](data-sources/dxy/data/20200206-004154-dxy-2019ncov-data.svg)
 
-![image](data-sources/bno/data/20200131-173200-bno-2019ncov-data.svg)
+![image](data-sources/bno/data/20200204-205200-bno-2019ncov-data.svg)
 
 Generates static SVGs. 
 
-Source images were [this one](https://upload.wikimedia.org/wikipedia/commons/f/fe/China_blank_province_map.svg) and [this one](https://commons.wikimedia.org/wiki/File:BlankMap-World.svg).
+Source images were `China_blank_province_map.svg`([link](https://commons.wikimedia.org/wiki/File:China_blank_province_map.svg)) and `BlankMap-World.svg`([link](https://commons.wikimedia.org/wiki/File:BlankMap-World.svg)).
+
+## Requirements
+
+Unix-like OS with the dependencies installed (see [Software Dependencies](#software-dependencies)). In practice that means macOS with brew, Linux or a BSD. Windows is unsupported.
 
 ## Generating
 
@@ -38,7 +42,7 @@ You now have timestamped JSON, CSV and SVG files in the `data-sources/dxy/data/`
 
 ### World
 
-For a world map, the process is similar.
+For a world map, the process is similar. __Note that the BNO world data parser is currently broken and we have no plan to fix it.__
 
 ```
 ./build world
@@ -53,6 +57,7 @@ Probably an incomplete list:
  * perl
  * php
  * imagemagick
+ * gifsicle
  * ffmpeg
  * wget
 
@@ -60,20 +65,19 @@ Probably an incomplete list:
 
 ### [BNO](https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/)
 
-Includes detail on foreign sources, individual provincial update URLs. Updated once per day or so.
+Includes detail on foreign sources, individual provincial update URLs. Updated once per day or so. __Note this is currently broken with no plans to fix it.__
  * Data is timestamped in US Eastern Standard Time (ET) timezone
- * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/bno/data/20200131-173200-bno-2019ncov-data.csv)
+ * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/bno/data/20200204-205200-bno-2019ncov-data.csv)
 
 ### [DXY](https://3g.dxy.cn/newh5/view/pneumonia)
 
 High level information without specific source URLs. However, this is updated frequently and appears to be the best available data.
 
  * Data is timestamped in Beijing (CST) timezone
- * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/dxy/data/20200131-215253-dxy-2019ncov-data.csv)
+ * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/dxy/data/20200206-004154-dxy-2019ncov-data.csv)
 
 ## TODO
 
- * Add historical data from personal archives and [Alihealth](https://alihealth.taobao.com/medicalhealth/influenzamap?chInfo=spring2020-stay-in) (thanks to @aboutmydreams / #3)
  * Add key to global view
  * Convert disparate data sources in to singular SQLite database
  * Add cities (needs an improved visualization system)
@@ -83,6 +87,7 @@ High level information without specific source URLs. However, this is updated fr
    * [jvectormap](https://jvectormap.com/) and [jvectormap china](https://jvectormap.com/maps/countries/china/) (good option but no cities)
    * [kartograph](http://kartograph.org/) (good option)
  * Add other sources, eg.
+   * [WHO situation reports](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports)
    * [National Health Commission daily reports](http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml)
    * [Tencent live monitoring page](https://news.qq.com//zt2020/page/feiyan.htm)
    * [English Wikipedia](https://en.wikipedia.org/wiki/2019%E2%80%9320_Wuhan_coronavirus_outbreak) (although it generally lags DXY on updates, the summary table is good for international data citations)
@@ -91,6 +96,10 @@ High level information without specific source URLs. However, this is updated fr
 
 ## Links of note
 
+ * *[Coronavirus tally in epicentre Wuhan may be ‘just the tip of the iceberg’](https://www.scmp.com/news/china/society/article/3048792/coronavirus-tally-epicentre-wuhan-may-be-just-tip-iceberg)* (2020-02-03)
+   * *A doctor at the Union Hospital in Wuhan, who declined to be identified, said staff could only test about 100 patients a day, and they had to wait 48 hours for the results. “When the National Health Commission announces the numbers, they’re already two days old,” the doctor said. “We also have to turn away patients with mild symptoms, knowing that many of them will return later [when their condition worsens]. But we don’t have the space in the testing centre, or the hospital beds.”*
+   * *“There have also been many patients who died of undifferentiated respiratory and undiagnosed pneumonia symptoms in Wuhan since December – before the virus testing kits were made available,” Tsang said. “These cases should have been investigated and counted [in the tally] if confirmed. These are factors pointing to inaccurate reporting of the official figures,” he said.*
+   * *A doctor at the Tongji Hospital in Wuhan, speaking on condition of anonymity, said the kits were still in short supply. “I don’t know what’s gone wrong – we only have a very limited number of testing kits every day, there’s been no increase yet,” the doctor said.*
  * *[Potential for global spread of a novel coronavirus from China ](https://academic.oup.com/jtm/advance-article/doi/10.1093/jtm/taaa011/5716260)* (2020-01-27)
    * Ranks Burma, Cambodia, India, Indonesia, Philippines as relatively vulnerable.
  * *[Real-time nowcast and forecast on the extent of the Wuhan CoV outbreak, domestic and international spread](https://www.med.hku.hk/f/news/3549/7418/Wuhan-coronavirus-outbreak_AN-UPDATE_20200127.pdf)* (2020-01-27)
