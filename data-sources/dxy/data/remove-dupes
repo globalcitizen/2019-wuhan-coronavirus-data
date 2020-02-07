@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+$data = `./dupe-finder|sed 's/ = /|/g'`;
+@lines = split("\n",$data);
+$lasthash = '';
+foreach $line (@lines) {
+ my $file, $hash;
+ ($file,$hash) = split(/\|/,$line);
+ print "file = $file      hash = $hash\n";
+ # if same as last time, delete
+ if($lasthash ne '' && $hash ne '' && $lasthash eq $hash) {
+  print "$lasthash == $hash\n";
+  $file =~ s/\.csv$/.*/;
+  if(length($file) > 10) {
+   print " - removing '$file'... ";
+   `rm $file`;
+   print "OK\n";
+  }
+ }
+ # remember for next round
+ $lasthash = $hash;
+}
