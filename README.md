@@ -113,6 +113,7 @@ High level information without specific source URLs. However, this is updated fr
 
 ## Other projects
 
+ * [Open source Wuhan](https://weileizeng.github.io/OpenSourceWuhan/) (list of projects related to the virus in Chinese)
  * [BlankerL's DXY-2019-nCoV-Crawler](https://github.com/BlankerL/DXY-2019-nCoV-Crawler) and [API](http://lab.isaaclin.cn/nCoV/)
  * [yitao94's 2019-nCoV python-based DXY crawler](https://github.com/yitao94/2019-nCoV)
 
