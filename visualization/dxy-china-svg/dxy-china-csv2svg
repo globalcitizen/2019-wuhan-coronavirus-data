@@ -101,7 +101,7 @@ foreach($lines as $line) {
 
 # update title
 $svg = preg_replace('/SUBTITLE/',$dateline,$svg);
-$svg = preg_replace('/TITLE/','2019-nCoV Confirmed Cases',$svg);
+$svg = preg_replace('/TITLE/','COVID-19 Confirmed Cases',$svg);
 $svg = preg_replace('/NOTES1/','Open source data visualization',$svg);
 $svg = preg_replace('/NOTES2/','https://github.com/globalcitizen/2019-wuhan-coronavirus-data',$svg);
 $svg = preg_replace('/BOX1/','Over ' . $threshold . ' confirmed cases',$svg);
