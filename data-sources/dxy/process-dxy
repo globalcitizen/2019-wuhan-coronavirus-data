@@ -48,7 +48,7 @@ if(!($structure = json_decode($json_data,1))) {
 # calculate output filenames
 $output_file_basename = dirname(__FILE__) . '/data/' . date('Ymd-His',$date_parsed) . '-dxy-2019ncov-data';
 $output_csv_filename = $output_file_basename . '.csv';
-$output_svg_filename = $output_file_basename . '.csv';
+$output_svg_filename = $output_file_basename . '.svg';
 $output_json_filename = $output_file_basename . '.json';
 
 # store JSON in case required later
