@@ -1,4 +1,4 @@
-# 2019 Wuhan Coronavirus data (2019-nCoV)
+# 2019 Wuhan Coronavirus data (COVID-19 / 2019-nCoV)
 
 This public repository archives data over time from various public sources on the web.
 
@@ -16,7 +16,7 @@ Shown here in GIF format. There is a better (smaller/higher resolution) webm for
 
 ## Sample visualization
 
-![image](data-sources/dxy/data/20200303-232230-dxy-2019ncov-data.svg)
+![image](data-sources/dxy/data/20200311-175101-dxy-2019ncov-data.svg)
 
 ![image](data-sources/bno/data/20200204-205200-bno-2019ncov-data.svg)
 
@@ -74,7 +74,7 @@ Includes detail on foreign sources, individual provincial update URLs. Updated o
 High level information without specific source URLs. However, this is updated frequently and appears to be the best available data.
 
  * Data is timestamped in Beijing (CST) timezone
- * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/dxy/data/20200303-232230-dxy-2019ncov-data.csv)
+ * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/dxy/data/20200311-175101-dxy-2019ncov-data.csv)
 
 ## TODO
 
