@@ -16,7 +16,7 @@ Shown here in GIF format. There is a better (smaller/higher resolution) webm for
 
 ## Sample visualization
 
-![image](data-sources/dxy/data/20200318-041722-dxy-2019ncov-data.svg)
+![image](data-sources/dxy/data/20200319-013132-dxy-2019ncov-data.svg)
 
 ![image](data-sources/bno/data/20200204-205200-bno-2019ncov-data.svg)
 
@@ -67,14 +67,7 @@ Probably an incomplete list:
 
 Includes detail on foreign sources, individual provincial update URLs. Updated once per day or so. __Note this is currently broken with no plans to fix it.__
  * Data is timestamped in US Eastern Standard Time (ET) timezone
- * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/bno/data/20200204-205200-bno-2019ncov-data.csv)
-
-### [DXY](https://3g.dxy.cn/newh5/view/pneumonia)
-
-High level information without specific source URLs. However, this is updated frequently and appears to be the best available data.
-
- * Data is timestamped in Beijing (CST) timezone
- * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/dxy/data/20200318-041722-dxy-2019ncov-data.csv)
+ * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/bno/data/20200319-013132-dxy-2019ncov-data.csv)
 
 ## TODO
 
