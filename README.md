@@ -61,14 +61,6 @@ Probably an incomplete list:
  * ffmpeg
  * wget
 
-## Sources used
-
-### [BNO](https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/)
-
-Includes detail on foreign sources, individual provincial update URLs. Updated once per day or so. __Note this is currently broken with no plans to fix it.__
- * Data is timestamped in US Eastern Standard Time (ET) timezone
- * [Direct link to latest data](https://raw.githubusercontent.com/globalcitizen/2019-wuhan-coronavirus-data/master/data-sources/bno/data/20200319-013132-dxy-2019ncov-data.csv)
-
 ## TODO
 
  * Add key to global view
