@@ -8,6 +8,10 @@ It is hoped that this data will be useful to those producing visualizations or a
 
 Code is included.
 
+## No longer updated
+
+Please note this data is no longer updated. It substantially covers the significant period of growth of the virus in China and should be useful for historical analysis.
+
 ## Sample animation
 
 Shown here in GIF format. There is a better (smaller/higher resolution) webm format also generated.
@@ -16,7 +20,7 @@ Shown here in GIF format. There is a better (smaller/higher resolution) webm for
 
 ## Sample visualization
 
-![image](data-sources/dxy/data/20200319-013132-dxy-2019ncov-data.svg)
+![image](data-sources/dxy/data/20200322-141025-dxy-2019ncov-data.svg)
 
 ![image](data-sources/bno/data/20200204-205200-bno-2019ncov-data.svg)
 
